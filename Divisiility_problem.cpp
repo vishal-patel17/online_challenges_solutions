@@ -20,47 +20,33 @@ Output:
 
  */
 
+
 #include <iostream>
-#include <forward_list>
 using namespace std;
-
-
-
-
 int main() {
 
     int l;
-    int n,x,y;
+    int n[10],x[10],y[10],ans[10];
     cin>>l;
     cin.ignore();
     cout<<endl;
-    forward_list<int> forward_list1;
 
 
     for(int i = 0;i<l;i++){
-        cin>>n;
-        cin>>x;
-        cin>>y;
+        cin>>n[i];
+        cin>>x[i];
+        cin>>y[i];
         cin.ignore();
-        forward_list1.push_front(n);
-        forward_list1.push_front(x);
-        forward_list1.push_front(y);
-        forward_list1.reverse();
-
-
 
     }
-    forward_list1.reverse();
-    for(auto& x:forward_list1) {
-        for(int i = 0; i<n;i++){
-            if(i % x ==0 && i % y != 0){
-                cout<<i<<" ";
+    for(int i=0;i<l;i++) {
+        for (int j = 0; j < n[i]; j++) {
+            if (j % x[i] == 0 && j % y[i] != 0) {
+                cout << j << " ";
             }
         }
+        cout<<endl;
     }
-
-
-
 
     return 0;
 }
