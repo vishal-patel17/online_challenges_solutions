@@ -36,6 +36,7 @@ int main() {
     cout<<endl;
     forward_list<int> forward_list1;
 
+
     for(int i = 0;i<l;i++){
         cin>>n;
         cin>>x;
@@ -47,6 +48,7 @@ int main() {
         forward_list1.reverse();
 
 
+
     }
     forward_list1.reverse();
     for(auto& x:forward_list1) {
@@ -56,6 +58,8 @@ int main() {
             }
         }
     }
+
+
 
 
     return 0;
